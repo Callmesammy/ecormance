@@ -20,7 +20,7 @@ export default function HomeScreen() {
         {
       id: 1,
       desciption: 'Smells Good',
-      basics: 'Food',
+      basics: 'food',
       amount: '70,000',
     },
         {
