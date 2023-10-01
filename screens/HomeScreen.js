@@ -52,7 +52,7 @@ export default function HomeScreen() {
     
     <ScreenWrapper>
       <View className="p-4 flex-row items-center mb-2 justify-between">
-      <Text className={`${Colors.heading} text-2xl font-bold shadow-sm`}>HomeScreen</Text>
+      <Text className={`${Colors.heading} text-2xl font-bold shadow-sm`}>Let's Goo</Text>
       <TouchableOpacity className="border border-white rounded-full px-3 p-2 bg-white " >
         <Text className={`${Colors.button} text-sm`}>Logout</Text>
       </TouchableOpacity>
