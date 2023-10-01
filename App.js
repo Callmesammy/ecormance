@@ -7,6 +7,7 @@ import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import AddTripScreen from './screens/AddTripScreen';
 import AddExpenseScreen from './screens/AddExpenseScreen';
+import TripExpenses from './screens/TripExpenses';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ function App() {
         <Stack.Screen name="Login" options={{headerShown: false}} component={LoginScreen} />
         <Stack.Screen name="AddTrip" options={{headerShown: false}} component={AddTripScreen} />
         <Stack.Screen name="AddExpense" options={{headerShown: false}} component={AddExpenseScreen} />
+        <Stack.Screen name="TripExpenses" options={{headerShown: false}} component={AddExpenseScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
