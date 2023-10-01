@@ -6,7 +6,7 @@ import { randomColor, themes } from '../themes/theme'
 
 export default function Expenses({item}) {
   return (
-    <View style={{backgroundColor: randomColor[item.basics]}} className=" flex-row shadow-sm justify-between mx-2 items-center p-4  mb-3  rounded-2xl bg-green-400 px-3 " >
+    <View style={{backgroundColor: randomColor[item.basics]}} className=" top-3 flex-row shadow-sm justify-between mx-2 items-center p-4  mb-3  rounded-2xl bg-green-400 px-3 " >
       <View >
         <Text className={`${themes.Clx} font-bold`}>{item.desciption}</Text>
         <Text className={`${themes.Clx} text-xs`}>{item.basics}</Text>
