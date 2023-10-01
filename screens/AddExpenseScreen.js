@@ -2,10 +2,10 @@ import { View, Text, TouchableOpacity, Image, FlatList, Touchable } from 'react-
 import React from 'react'
 import ScreenWrapper from './../components/ScreenWrapper';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { randomImages } from './../assets/images/randonImage';
 import EmptyComponent from '../components/EmptyComponent';
 import { useNavigation } from '@react-navigation/native';
 import Reverse from '../components/Reverse';
+import Expenses from './Expenses.js';
 
 export default function HomeScreen() {
 
@@ -13,39 +13,35 @@ export default function HomeScreen() {
   const items =[
     {
       id: 1,
-      place: 'Lagos',
-      country: 'Nigeria',
+      desciption: 'Journer to Lagos',
+      basics: 'Transportation',
+      amount: '50,000',
     },
-      {
-      id: 2,
-      place: 'Kebbi',
-      country: 'Nigeria',
+        {
+      id: 1,
+      desciption: 'Smells Good',
+      basics: 'Food',
+      amount: '70,000',
     },
-      {
-      id: 3,
-      place: 'Ogun',
-      country: 'Nigeria',
+        {
+      id: 1,
+      desciption: 'Lets Go to the market',
+      basics: 'Shopping',
+      amount: '160,000',
     },
-      {
-      id: 4,
-      place: 'Enugu',
-      country: 'Nigeria',
+        {
+      id: 1,
+      desciption: 'Journer to Paradise',
+      basics: 'Vacation',
+      amount: '100,000',
     },
-      {
-      id: 5,
-      place: 'Imo',
-      country: 'Nigeria',
+         {
+      id: 1,
+      desciption: 'Journer to beyound',
+      basics: 'commute',
+      amount: '60,000',
     },
-      {
-      id: 6,
-      place: 'Osun',
-      country: 'Nigeria',
-    },
-      {
-      id: 7,
-      place: 'Katsina',
-      country: 'Nigeria',
-    },
+    
     
   ];
   const navigation = useNavigation();
@@ -62,7 +58,7 @@ export default function HomeScreen() {
     <View className="flex-row items-center justify-between">
       <Text className={`${Colors.heading} text-xl font-bold`}>Exepenses</Text>
       <TouchableOpacity 
-      onPress={() => navigation.navigate('AddTrip')}
+      onPress={() => navigation.navigate('Indi')}
     className="border border-white rounded-full mb-2 bg-black px-3 p-2">
         <Text className="text-sm text-white  font-semibold">Add Eexpenses</Text>
       </TouchableOpacity>
@@ -71,16 +67,12 @@ export default function HomeScreen() {
     <View style={{height: 430}}>
       <FlatList 
       data={items}
-      keyExtrator={item =>item.id}
-    
-
-      renderItem={({}) => {
+      ListEmptyComponent={<EmptyComponent message={'No Expenses addede yet'}/>}
+      keyExtrator={item =>item.id} 
+      renderItem={({item}) => {
         return (
-          <TouchableOpacity onPress={()=>navigation.navigate('TripExpenses')} className="bg-white rounded-md mb-2 p-3 mx-2 shadow-sm my-2"> 
-            <View >
-           
-            </View>
-          </TouchableOpacity>
+          
+          <Expenses item={item}/>
         )
       }}
       />
