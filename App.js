@@ -9,6 +9,7 @@ import AddTripScreen from './screens/AddTripScreen';
 import AddExpenseScreen from './screens/AddExpenseScreen';
 import TripExpenses from './screens/TripExpenses';
 import Expenses from './screens/Expenses.js';
+import expensesTrait from './screens/expensesTrait';
 
 
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,7 @@ function App() {
         <Stack.Screen name="AddExpense" options={{headerShown: false}} component={AddExpenseScreen} />
         <Stack.Screen name="TripExpenses" options={{headerShown: false}} component={AddExpenseScreen} />
         <Stack.Screen name="Exp" options={{headerShown: false}} component={Expenses} />
+        <Stack.Screen name="Traits" options={{headerShown: false}} component={expensesTrait} />
       </Stack.Navigator>
     </NavigationContainer>
   );
